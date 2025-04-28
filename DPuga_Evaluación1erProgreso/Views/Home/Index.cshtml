@@ -1,4 +1,4 @@
-﻿﻿@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,6 +6,23 @@
     <h1 class="display-4 fw-bold">Examen Progreso 1</h1>
     <p class="lead">¡Califique con corazón de padre pls!</p>
 </div>
+
 <div class="text-center">
-    <img src="@Url.Content("~/Images/meme1.png")" class="rounded" alt="Imagen 1">
+    <img src="@Url.Content("~/Images/meme1.png")" class="rounded" alt="Imagen 1" style="width:400px; height:500px;">
 </div>
+
+<br />
+
+<div class="text-center">
+    <input type="text" id="campoTexto" class="form-control mb-3" placeholder="Escribe algo..." style="max-width: 400px; margin: 0 auto;">
+    <button class="btn btn-outline-info btn-lg" onclick="mostrarAlerta()">Mostrar alerta</button>
+</div>
+
+@section Scripts {
+    <script>
+        function mostrarAlerta() {
+            var texto = document.getElementById("campoTexto").value;
+            alert("Mi nombre es David Puga, mi hobbie es jugar videojuegos y escuchar música el valor del campo de texto es: " + texto);
+        }
+    </script>
+}
