@@ -10,6 +10,7 @@ using DPuga_Evaluación1erProgreso.Models;
 
 namespace DPuga_Evaluación1erProgreso.Controllers
 {
+    
     public class DPugaClientesController : Controller
     {
         private readonly DPuga_Evaluación1erProgresoContext _context;
@@ -18,6 +19,8 @@ namespace DPuga_Evaluación1erProgreso.Controllers
         {
             _context = context;
         }
+
+        [HttpPost]
 
         // GET: DPugaClientes
         public async Task<IActionResult> Index()
