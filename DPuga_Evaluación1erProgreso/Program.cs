@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using DPuga_Evaluación1erProgreso.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DPuga_Evaluación1erProgresoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DPuga_Evaluación1erProgresoContext") ?? throw new InvalidOperationException("Connection string 'DPuga_Evaluación1erProgresoContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
