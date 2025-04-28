@@ -6,22 +6,26 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Agrega un nuevo cliente o consulta la información de alguno</p>
 
 <h2>Clientes</h2>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Acciones</th>
+            <th>Nombre</th>            
+            <th>Fecha de registro</th>
+            <th>Tiene membresia</th>
+            <th>Monto de la reserva</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var cliente in Model)
         {
             <tr>
-                <td>@cliente.Nombre</td>               
+                <td>@cliente.Nombre</td>
+                <td>@cliente.FechaNacimiento de registro</td>
+                <td>@cliente.TieneMembresia membresia</td>
                 <td>
                     <a asp-action="Edit" asp-controller="DPugaClientes" asp-route-id="@cliente.IdCliente" class="btn btn-warning btn-sm">Editar</a>
                     <a asp-action="Details" asp-controller="DPugaClientes" asp-route-id="@cliente.IdCliente" class="btn btn-info btn-sm">Detalles</a>
