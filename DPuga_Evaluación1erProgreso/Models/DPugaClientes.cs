@@ -16,6 +16,6 @@ namespace DPuga_Evaluación1erProgreso.Models
         [Range(0,100)]
         public DateTime FechaNacimiento { get; set; }
         [Range(0, 100)]
-        public decimal MontoReserva { get; set; }
+        public decimal MontoReserva { get; set; }        
     }
 }

@@ -10,7 +10,6 @@ using DPuga_Evaluación1erProgreso.Models;
 
 namespace DPuga_Evaluación1erProgreso.Controllers
 {
-    
     public class DPugaClientesController : Controller
     {
         private readonly DPuga_Evaluación1erProgresoContext _context;
@@ -19,8 +18,6 @@ namespace DPuga_Evaluación1erProgreso.Controllers
         {
             _context = context;
         }
-
-        [HttpPost]
 
         // GET: DPugaClientes
         public async Task<IActionResult> Index()
@@ -53,8 +50,6 @@ namespace DPuga_Evaluación1erProgreso.Controllers
         }
 
         // POST: DPugaClientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdCliente,Nombre,TieneMembresia,FechaNacimiento,MontoReserva")] DPugaClientes dPugaClientes)
@@ -85,8 +80,6 @@ namespace DPuga_Evaluación1erProgreso.Controllers
         }
 
         // POST: DPugaClientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdCliente,Nombre,TieneMembresia,FechaNacimiento,MontoReserva")] DPugaClientes dPugaClientes)
